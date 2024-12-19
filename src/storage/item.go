@@ -359,6 +359,7 @@ func (s *Storage) SyncSearch() {
 		)
 		if err != nil {
 			log.Print(err)
+			log.Print(result)
 			return
 		}
 		if numrows, err := result.RowsAffected(); err == nil && numrows == 1 {
