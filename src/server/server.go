@@ -49,7 +49,7 @@ func (h *Server) GetAddr() string {
 
 func (s *Server) Start() {
 	refreshRate := s.db.GetSettings().RefreshRate
-	s.worker.StartFeedCleaner()
+//	s.worker.StartFeedCleaner() Stopping clearing of old feeds
 	s.worker.SetRefreshRate(refreshRate)
 
 	var ln net.Listener
